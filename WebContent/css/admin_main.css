@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+#adminOptions {
+	width:200px ;
+	height:70% ;
+	position:absolute ;
+	left:0px ;
+	top:27% ;
+	border: 1px solid black ;
+	
+	border-left:hidden;
+	border-top:hidden ;
+	border-bottom:hidden ;
+}
+#adminOptions button {
+	 width: auto;
+	  display: table;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top:20px;
+}
+

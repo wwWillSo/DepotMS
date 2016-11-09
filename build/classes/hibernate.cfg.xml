@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.url">jdbc:sqlserver://localhost:1433;DatabaseName = DepotMS</property>
+        <property name="connection.username">WillSo</property>
+        <property name="connection.password">19941224</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <!-- <property name="connection.pool_size">1</property>  -->
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+      <!--   <property name="current_session_context_class">thread</property>   -->
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        
+        <property name="format_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property> 		
+
+		<!-- Student用的是xml配置，所以要这样写映射路径 -->
+		<mapping class="szw.depotms.model.Admin"/>
+		<mapping class="szw.depotms.model.Car"/>
+		<mapping class="szw.depotms.model.Classes"/>
+		<mapping class="szw.depotms.model.DayArrange"/>
+		<mapping class="szw.depotms.model.Dept"/>
+		<mapping class="szw.depotms.model.Line"/>
+		<mapping class="szw.depotms.model.MonthArrange"/>
+		<mapping class="szw.depotms.model.Staff"/>
+		<mapping class="szw.depotms.model.Station"/>
+		<mapping class="szw.depotms.model.StationOfLine"/>
+		<mapping class="szw.depotms.model.WeekArrange"/>
+		<mapping class="szw.depotms.model.ArrangeInfo"/>
+		<mapping class="szw.depotms.model.Driver"/>
+		
+    </session-factory>
+
+</hibernate-configuration>

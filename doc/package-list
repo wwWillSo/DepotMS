@@ -1,0 +1,8 @@
+szw.depotms.calculator
+szw.depotms.controller
+szw.depotms.dao
+szw.depotms.dao.impl
+szw.depotms.model
+szw.depotms.service
+szw.depotms.service.impl
+szw.depotms.test
